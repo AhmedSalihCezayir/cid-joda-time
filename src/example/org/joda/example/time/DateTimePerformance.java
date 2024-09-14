@@ -855,6 +855,7 @@ public class DateTimePerformance {
     }
 
     private void checkDateToString() {
+        System.out.println("TEST");
         int COUNT = COUNT_SLOW;
         Date dt = new Date();
         for (int i = 0; i < AVERAGE; i++) {
