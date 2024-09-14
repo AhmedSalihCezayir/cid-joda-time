@@ -215,6 +215,7 @@ public class DateTimeBrowser extends JFrame {
      * getDefaultTableView
      */
     private TableView getDefaultTableView() {
+        System.out.println("TEST");
         // No user input.
         String viewStr = System.getProperty("use.view");
         if ( viewStr == null ) {
