@@ -84,6 +84,7 @@ class ReadableIntervalConverter extends AbstractConverter
      */
     @Override
     public boolean isReadableInterval(Object object, Chronology chrono) {
+        System.out.println("TEST");
         return true;
     }
 
