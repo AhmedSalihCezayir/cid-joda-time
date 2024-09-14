@@ -2107,6 +2107,7 @@ public final class DateTime
          * Writes the property in a safe serialization format.
          */
         private void writeObject(ObjectOutputStream oos) throws IOException {
+            System.out.println("TEST");
             oos.writeObject(iInstant);
             oos.writeObject(iField.getType());
         }
