@@ -39,6 +39,7 @@ public class TimeZoneTable {
         .toFormatter();
 
     public static void main(String[] args) throws Exception {
+        System.out.println("TEST");
         Set idSet = DateTimeZone.getAvailableIDs();
         ZoneData[] zones = new ZoneData[idSet.size()];
         
@@ -89,6 +90,7 @@ public class TimeZoneTable {
     }
 
     private static void printRow(PrintStream out, ZoneData zone, List aliases) {
+        System.out.println("TEST");
         out.print("<tr>");
                 
         out.print("<td align=\"left\" valign=\"top\">");
@@ -131,10 +133,12 @@ public class TimeZoneTable {
         }
 
         public boolean isCanonical() {
+            System.out.println("TEST");
             return getID().equals(getCanonicalID());
         }
 
         public String getStandardOffsetStr() {
+            System.out.println("TEST");
             long millis = cNow;
             while (iZone.getOffset(millis) != iZone.getStandardOffset(millis)) {
                 long next = iZone.nextTransition(millis);
@@ -147,6 +151,7 @@ public class TimeZoneTable {
         }
 
         public int compareTo(Object obj) {
+            System.out.println("TEST");
             ZoneData other = (ZoneData) obj;
 
             int offsetA = iZone.getStandardOffset(cNow);
