@@ -141,6 +141,7 @@ abstract class BasicChronology extends AssembledChronology {
 
     @Override
     public DateTimeZone getZone() {
+        System.out.println("TEST");
         Chronology base;
         if ((base = getBase()) != null) {
             return base.getZone();
@@ -152,6 +153,7 @@ abstract class BasicChronology extends AssembledChronology {
     public long getDateTimeMillis(
             int year, int monthOfYear, int dayOfMonth, int millisOfDay)
             throws IllegalArgumentException {
+        System.out.println("TEST");
         Chronology base;
         if ((base = getBase()) != null) {
             return base.getDateTimeMillis(year, monthOfYear, dayOfMonth, millisOfDay);
@@ -216,6 +218,7 @@ abstract class BasicChronology extends AssembledChronology {
      */
     @Override
     public boolean equals(Object obj) {
+        System.out.println("TEST");
         if (this == obj) {
             return true;
         }
@@ -269,6 +272,7 @@ abstract class BasicChronology extends AssembledChronology {
 
     @Override
     protected void assemble(Fields fields) {
+        System.out.println("TEST");
         // First copy fields that are the same for all Gregorian and Julian
         // chronologies.
 
@@ -337,6 +341,7 @@ abstract class BasicChronology extends AssembledChronology {
      * @return 366
      */
     int getDaysInYearMax() {
+        System.out.println("TEST");
         return 366;
     }
 

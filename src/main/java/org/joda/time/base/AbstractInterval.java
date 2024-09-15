@@ -228,6 +228,7 @@ public abstract class AbstractInterval implements ReadableInterval {
      * @return true if the time intervals overlap
      */
     public boolean overlaps(ReadableInterval interval) {
+        System.out.println("TEST");
         long thisStart = getStartMillis();
         long thisEnd = getEndMillis();
         if (interval == null) {
@@ -251,6 +252,7 @@ public abstract class AbstractInterval implements ReadableInterval {
      * @since 2.3
      */
     public boolean isEqual(ReadableInterval other) {
+        System.out.println("TEST");
         return getStartMillis() == other.getStartMillis() &&
                 getEndMillis() == other.getEndMillis();
     }
@@ -265,6 +267,7 @@ public abstract class AbstractInterval implements ReadableInterval {
      * @return true if this time interval is before the instant
      */
     public boolean isBefore(long millisInstant) {
+        System.out.println("TEST");
         return (getEndMillis() <= millisInstant);
     }
 
@@ -276,6 +279,7 @@ public abstract class AbstractInterval implements ReadableInterval {
      * @return true if this time interval is before the current instant
      */
     public boolean isBeforeNow() {
+        System.out.println("TEST");
         return isBefore(DateTimeUtils.currentTimeMillis());
     }
 
@@ -444,6 +448,7 @@ public abstract class AbstractInterval implements ReadableInterval {
      * @return a time period derived from the interval
      */
     public Period toPeriod(PeriodType type) {
+        System.out.println("TEST");
         return new Period(getStartMillis(), getEndMillis(), type, getChronology());
     }
 

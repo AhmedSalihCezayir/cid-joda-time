@@ -387,6 +387,7 @@ public abstract class BasePeriod
      * @param newValue  the new value to store if successful
      */
     private void checkAndUpdate(DurationFieldType type, int[] values, int newValue) {
+        System.out.println("TEST");
         int index = indexOf(type);
         if (index == -1) {
             if (newValue != 0) {
@@ -406,6 +407,7 @@ public abstract class BasePeriod
      * @throws IllegalArgumentException if an unsupported field's value is non-zero
      */
     protected void setPeriod(ReadablePeriod period) {
+        System.out.println("TEST");
         if (period == null) {
             setValues(new int[size()]);
         } else {
@@ -417,6 +419,7 @@ public abstract class BasePeriod
      * Private method called from constructor.
      */
     private void setPeriodInternal(ReadablePeriod period) {
+        System.out.println("TEST");
         int[] newValues = new int[size()];
         for (int i = 0, isize = period.size(); i < isize; i++) {
             DurationFieldType type = period.getFieldType(i);
@@ -441,6 +444,7 @@ public abstract class BasePeriod
      */
     protected void setPeriod(int years, int months, int weeks, int days,
                              int hours, int minutes, int seconds, int millis) {
+        System.out.println("TEST");
         int[] newValues = setPeriodInternal(years, months, weeks, days, hours, minutes, seconds, millis);
         setValues(newValues);
     }
@@ -450,6 +454,7 @@ public abstract class BasePeriod
      */
     private int[] setPeriodInternal(int years, int months, int weeks, int days,
                                    int hours, int minutes, int seconds, int millis) {
+        System.out.println("TEST");
         int[] newValues = new int[size()];
         checkAndUpdate(DurationFieldType.years(), newValues, years);
         checkAndUpdate(DurationFieldType.months(), newValues, months);

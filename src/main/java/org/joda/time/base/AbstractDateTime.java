@@ -269,6 +269,7 @@ public abstract class AbstractDateTime
      * @return a localized Calendar initialised with this datetime
      */
     public Calendar toCalendar(Locale locale) {
+        System.out.println("TEST");
         if (locale == null) {
             locale = Locale.getDefault();
         }
@@ -293,6 +294,7 @@ public abstract class AbstractDateTime
      * @return a GregorianCalendar initialised with this datetime
      */
     public GregorianCalendar toGregorianCalendar() {
+        System.out.println("TEST");
         DateTimeZone zone = getZone();
         GregorianCalendar cal = new GregorianCalendar(zone.toTimeZone());
         cal.setTime(toDate());
@@ -313,6 +315,7 @@ public abstract class AbstractDateTime
     @Override
     @ToString
     public String toString() {
+        System.out.println("TEST");
         return super.toString();
     }
 
@@ -324,6 +327,7 @@ public abstract class AbstractDateTime
      * @see  org.joda.time.format.DateTimeFormat
      */
     public String toString(String pattern) {
+        System.out.println("TEST");
         if (pattern == null) {
             return toString();
         }
@@ -339,6 +343,7 @@ public abstract class AbstractDateTime
      * @see  org.joda.time.format.DateTimeFormat
      */
     public String toString(String pattern, Locale locale) throws IllegalArgumentException {
+        System.out.println("TEST");
         if (pattern == null) {
             return toString();
         }
