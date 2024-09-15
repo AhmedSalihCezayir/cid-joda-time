@@ -622,6 +622,7 @@ public final class DateMidnight
      * @since 1.1
      */
     public DateMidnight plusYears(int years) {
+        System.out.println("TEST");
         if (years == 0) {
             return this;
         }
@@ -646,6 +647,7 @@ public final class DateMidnight
      * @since 1.1
      */
     public DateMidnight plusMonths(int months) {
+        System.out.println("TEST");
         if (months == 0) {
             return this;
         }
@@ -1245,6 +1247,7 @@ public final class DateMidnight
          * Writes the property in a safe serialization format.
          */
         private void writeObject(ObjectOutputStream oos) throws IOException {
+            System.out.println("TEST");
             oos.writeObject(iInstant);
             oos.writeObject(iField.getType());
         }
@@ -1253,6 +1256,7 @@ public final class DateMidnight
          * Reads the property from a safe serialization format.
          */
         private void readObject(ObjectInputStream oos) throws IOException, ClassNotFoundException {
+            System.out.println("TEST");
             iInstant = (DateMidnight) oos.readObject();
             DateTimeFieldType type = (DateTimeFieldType) oos.readObject();
             iField = type.getField(iInstant.getChronology());
@@ -1276,6 +1280,7 @@ public final class DateMidnight
          */
         @Override
         protected long getMillis() {
+            System.out.println("TEST");
             return iInstant.getMillis();
         }
 
