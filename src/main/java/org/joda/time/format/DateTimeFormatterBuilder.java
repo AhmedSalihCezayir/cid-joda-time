@@ -102,6 +102,7 @@ public class DateTimeFormatterBuilder {
      * @throws UnsupportedOperationException if neither printing nor parsing is supported
      */
     public DateTimeFormatter toFormatter() {
+        System.out.println("TEST");
         Object f = getFormatter();
         InternalPrinter printer = null;
         if (isPrinter(f)) {
@@ -131,6 +132,7 @@ public class DateTimeFormatterBuilder {
      * @throws UnsupportedOperationException if printing is not supported
      */
     public DateTimePrinter toPrinter() {
+        System.out.println("TEST");
         Object f = getFormatter();
         if (isPrinter(f)) {
             InternalPrinter ip = (InternalPrinter) f;
@@ -169,6 +171,7 @@ public class DateTimeFormatterBuilder {
      * @return true if a formatter can be built
      */
     public boolean canBuildFormatter() {
+        System.out.println("TEST");
         return isFormatter(getFormatter());
     }
 
@@ -179,6 +182,7 @@ public class DateTimeFormatterBuilder {
      * @return true if a printer can be built
      */
     public boolean canBuildPrinter() {
+        System.out.println("TEST");
         return isPrinter(getFormatter());
     }
 
@@ -189,6 +193,7 @@ public class DateTimeFormatterBuilder {
      * @return true if a parser can be built
      */
     public boolean canBuildParser() {
+        System.out.println("TEST");
         return isParser(getFormatter());
     }
 

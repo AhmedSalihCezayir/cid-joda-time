@@ -154,7 +154,7 @@ public class ISODateTimeFormat {
         Collection<DateTimeFieldType> fields,
         boolean extended,
         boolean strictISO) {
-        
+        System.out.println("TEST");
         if (fields == null || fields.size() == 0) {
             throw new IllegalArgumentException("The fields must not be null or empty");
         }
@@ -217,7 +217,7 @@ public class ISODateTimeFormat {
         Collection<DateTimeFieldType> fields,
         boolean extended,
         boolean strictISO) {
-        
+        System.out.println("TEST");
         boolean reducedPrec = false;
         if (fields.remove(DateTimeFieldType.year())) {
             bld.append(Constants.ye);
@@ -285,7 +285,7 @@ public class ISODateTimeFormat {
         Collection<DateTimeFieldType> fields,
         boolean extended,
         boolean strictISO) {
-        
+        System.out.println("TEST");
         boolean reducedPrec = false;
         if (fields.remove(DateTimeFieldType.year())) {
             bld.append(Constants.ye);
@@ -322,7 +322,7 @@ public class ISODateTimeFormat {
         Collection<DateTimeFieldType> fields,
         boolean extended,
         boolean strictISO) {
-        
+        System.out.println("TEST");
         boolean reducedPrec = false;
         if (fields.remove(DateTimeFieldType.weekyear())) {
             bld.append(Constants.we);
@@ -394,7 +394,7 @@ public class ISODateTimeFormat {
         boolean strictISO,
         boolean reducedPrec,
         boolean datePresent) {
-        
+        System.out.println("TEST");
         boolean hour = fields.remove(DateTimeFieldType.hourOfDay());
         boolean minute = fields.remove(DateTimeFieldType.minuteOfHour());
         boolean second = fields.remove(DateTimeFieldType.secondOfMinute());

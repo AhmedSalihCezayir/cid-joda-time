@@ -159,6 +159,7 @@ public class DateTimeUtils {
      * @return the time in milliseconds from 1970-01-01T00:00:00Z
      */
     public static final long getInstantMillis(ReadableInstant instant) {
+        System.out.println("TEST");
         if (instant == null) {
             return DateTimeUtils.currentTimeMillis();
         }
@@ -177,6 +178,7 @@ public class DateTimeUtils {
      * @return the chronology, never null
      */
     public static final Chronology getInstantChronology(ReadableInstant instant) {
+        System.out.println("TEST");
         if (instant == null) {
             return ISOChronology.getInstance();
         }
@@ -201,6 +203,7 @@ public class DateTimeUtils {
      */
     public static final Chronology getIntervalChronology(ReadableInstant start, ReadableInstant end) {
         Chronology chrono = null;
+        System.out.println("TEST");
         if (start != null) {
             chrono = start.getChronology();
         } else if (end != null) {
@@ -265,6 +268,7 @@ public class DateTimeUtils {
      * @return the chronology, never null
      */
     public static final Chronology getChronology(Chronology chrono) {
+        System.out.println("TEST");
         if (chrono == null) {
             return ISOChronology.getInstance();
         }
@@ -282,6 +286,7 @@ public class DateTimeUtils {
      * @return the time zone, never null
      */
     public static final DateTimeZone getZone(DateTimeZone zone) {
+        System.out.println("TEST");
         if (zone == null) {
             return DateTimeZone.getDefault();
         }
