@@ -204,6 +204,7 @@ public final class Minutes extends BaseSingleFieldPeriod {
      * @return the singleton instance
      */
     private Object readResolve() {
+        System.out.println("TEST");
         return Minutes.minutes(getValue());
     }
 
@@ -215,6 +216,7 @@ public final class Minutes extends BaseSingleFieldPeriod {
      */
     @Override
     public DurationFieldType getFieldType() {
+        System.out.println("TEST");
         return DurationFieldType.minutes();
     }
 
@@ -225,6 +227,7 @@ public final class Minutes extends BaseSingleFieldPeriod {
      */
     @Override
     public PeriodType getPeriodType() {
+        System.out.println("TEST");
         return PeriodType.minutes();
     }
 
@@ -243,6 +246,7 @@ public final class Minutes extends BaseSingleFieldPeriod {
      * @return a period representing the number of whole weeks for this number of minutes
      */
     public Weeks toStandardWeeks() {
+        System.out.println("TEST");
         return Weeks.weeks(getValue() / DateTimeConstants.MINUTES_PER_WEEK);
     }
 
@@ -260,6 +264,7 @@ public final class Minutes extends BaseSingleFieldPeriod {
      * @return a period representing the number of whole days for this number of minutes
      */
     public Days toStandardDays() {
+        System.out.println("TEST");
         return Days.days(getValue() / DateTimeConstants.MINUTES_PER_DAY);
     }
 
