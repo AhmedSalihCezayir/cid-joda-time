@@ -89,6 +89,7 @@ public class TimeZoneTable {
     }
 
     private static void printRow(PrintStream out, ZoneData zone, List aliases) {
+        System.out.println("TEST");
         out.print("<tr>");
                 
         out.print("<td align=\"left\" valign=\"top\">");
