@@ -77,6 +77,7 @@ public final class GregorianChronology extends BasicGJChronology {
      * @return a singleton UTC instance of the chronology
      */
     public static GregorianChronology getInstanceUTC() {
+        System.out.println("TEST");
         return INSTANCE_UTC;
     }
 
@@ -86,6 +87,7 @@ public final class GregorianChronology extends BasicGJChronology {
      * @return a chronology in the default time zone
      */
     public static GregorianChronology getInstance() {
+        System.out.println("TEST");
         return getInstance(DateTimeZone.getDefault(), 4);
     }
 
@@ -107,6 +109,7 @@ public final class GregorianChronology extends BasicGJChronology {
      * @return a chronology in the specified time zone
      */
     public static GregorianChronology getInstance(DateTimeZone zone, int minDaysInFirstWeek) {
+        System.out.println("TEST");
         if (zone == null) {
             zone = DateTimeZone.getDefault();
         }
@@ -157,6 +160,7 @@ public final class GregorianChronology extends BasicGJChronology {
      * Serialization singleton
      */
     private Object readResolve() {
+        System.out.println("TEST");
         Chronology base = getBase();
         int minDays = getMinimumDaysInFirstWeek();
         minDays = (minDays == 0 ? 4 : minDays);  // handle rename of BaseGJChronology
@@ -174,6 +178,7 @@ public final class GregorianChronology extends BasicGJChronology {
      */
     @Override
     public Chronology withUTC() {
+        System.out.println("TEST");
         return INSTANCE_UTC;
     }
 
