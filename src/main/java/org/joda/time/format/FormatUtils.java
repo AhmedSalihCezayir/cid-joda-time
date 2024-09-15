@@ -47,6 +47,7 @@ public class FormatUtils {
      * @param size minimum amount of digits to append
      */
     public static void appendPaddedInteger(StringBuffer buf, int value, int size) {
+        System.out.println("TEST");
         try {
             appendPaddedInteger((Appendable)buf, value, size);
         } catch (IOException e) {
@@ -67,6 +68,7 @@ public class FormatUtils {
      * @since 2.4
      */
     public static void appendPaddedInteger(Appendable appenadble, int value, int size) throws IOException {
+        System.out.println("TEST");
         if (value < 0) {
             appenadble.append('-');
             if (value != Integer.MIN_VALUE) {
@@ -122,6 +124,7 @@ public class FormatUtils {
      * @param size minimum amount of digits to append
      */
     public static void appendPaddedInteger(StringBuffer buf, long value, int size) {
+        System.out.println("TEST");
         try {
             appendPaddedInteger((Appendable)buf, value, size);
         } catch (IOException e) {
@@ -142,6 +145,7 @@ public class FormatUtils {
      * @since 2.4
      */
     public static void appendPaddedInteger(Appendable appendable, long value, int size) throws IOException {
+        System.out.println("TEST");
         int intValue = (int)value;
         if (intValue == value) {
             appendPaddedInteger(appendable, intValue, size);
@@ -180,6 +184,7 @@ public class FormatUtils {
      * @throws IOException if an IO error occurs
      */
     public static void writePaddedInteger(Writer out, int value, int size) throws IOException {
+        System.out.println("TEST");
         if (value < 0) {
             out.write('-');
             if (value != Integer.MIN_VALUE) {

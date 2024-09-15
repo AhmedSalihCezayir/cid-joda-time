@@ -164,6 +164,7 @@ public class DateTimeFormatter {
      * @return true if this is a printer
      */
     public boolean isPrinter() {
+        System.out.println("TEST");
         return (iPrinter != null);
     }
 
@@ -173,6 +174,7 @@ public class DateTimeFormatter {
      * @return the internal printer; is null if printing not supported
      */
     public DateTimePrinter getPrinter() {
+        System.out.println("TEST");
         return InternalPrinterDateTimePrinter.of(iPrinter);
     }
 
@@ -182,6 +184,7 @@ public class DateTimeFormatter {
      * @return the internal printer; is null if printing not supported
      */
     InternalPrinter getPrinter0() {
+        System.out.println("TEST");
         return iPrinter;
     }
 
@@ -200,6 +203,7 @@ public class DateTimeFormatter {
      * @return the internal parser; is null if parsing not supported
      */
     public DateTimeParser getParser() {
+        System.out.println("TEST");
         return InternalParserDateTimeParser.of(iParser);
     }
 
@@ -220,6 +224,7 @@ public class DateTimeFormatter {
      * @return the new formatter
      */
     public DateTimeFormatter withLocale(Locale locale) {
+        System.out.println("TEST");
         if (locale == getLocale() || (locale != null && locale.equals(getLocale()))) {
             return this;
         }
