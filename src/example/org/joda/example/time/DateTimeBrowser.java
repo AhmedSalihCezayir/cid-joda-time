@@ -170,7 +170,7 @@ public class DateTimeBrowser extends JFrame {
      * the file.
      */
     private void go(String[] args) {
-
+        System.out.println("TEST");
         mainArgs = args;
         setDefaultTimeZone();   // let user override if needed
         // setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -215,6 +215,7 @@ public class DateTimeBrowser extends JFrame {
      * getDefaultTableView
      */
     private TableView getDefaultTableView() {
+        System.out.println("TEST");
         // No user input.
         String viewStr = System.getProperty("use.view");
         if ( viewStr == null ) {
@@ -248,12 +249,14 @@ public class DateTimeBrowser extends JFrame {
     * setDefaultTableView
     */
     private void setDefaultTableView(String newView) {
+        System.out.println("TEST");
         System.setProperty( "use.view", newView );
     }
     /*
      * setDefaultTimeZone
      */
     private void setDefaultTimeZone() {
+        System.out.println("TEST");
         String tzName = System.getProperty("use.time.zone");
         if ( tzName == null ) return;   // Use OS/user default.
         //
@@ -271,6 +274,7 @@ public class DateTimeBrowser extends JFrame {
      * addMenus
      */
     private void addMenus( JMenuBar menuBar) {
+        System.out.println("TEST");
         //
         // Create all the menus.
         //
