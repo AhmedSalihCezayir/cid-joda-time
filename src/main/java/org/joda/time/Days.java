@@ -277,6 +277,7 @@ public final class Days extends BaseSingleFieldPeriod {
      * @throws ArithmeticException if the number of hours is too large to be represented
      */
     public Hours toStandardHours() {
+        System.out.println("TEST");
         return Hours.hours(FieldUtils.safeMultiply(getValue(), DateTimeConstants.HOURS_PER_DAY));
     }
 
@@ -295,6 +296,7 @@ public final class Days extends BaseSingleFieldPeriod {
      * @throws ArithmeticException if the number of minutes is too large to be represented
      */
     public Minutes toStandardMinutes() {
+        System.out.println("TEST");
         return Minutes.minutes(FieldUtils.safeMultiply(getValue(), DateTimeConstants.MINUTES_PER_DAY));
     }
 
@@ -313,6 +315,7 @@ public final class Days extends BaseSingleFieldPeriod {
      * @throws ArithmeticException if the number of seconds is too large to be represented
      */
     public Seconds toStandardSeconds() {
+        System.out.println("TEST");
         return Seconds.seconds(FieldUtils.safeMultiply(getValue(), DateTimeConstants.SECONDS_PER_DAY));
     }
 
@@ -331,6 +334,7 @@ public final class Days extends BaseSingleFieldPeriod {
      * @return a duration equivalent to this number of days
      */
     public Duration toStandardDuration() {
+        System.out.println("TEST");
         long days = getValue();  // assign to a long
         return new Duration(days * DateTimeConstants.MILLIS_PER_DAY);
     }
@@ -372,6 +376,7 @@ public final class Days extends BaseSingleFieldPeriod {
      * @throws ArithmeticException if the result overflows an int
      */
     public Days plus(Days days) {
+        System.out.println("TEST");
         if (days == null) {
             return this;
         }

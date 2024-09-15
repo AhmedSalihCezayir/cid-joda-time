@@ -49,16 +49,19 @@ class BasicYearDateTimeField extends ImpreciseDateTimeField {
 
     @Override
     public boolean isLenient() {
+        System.out.println("TEST");
         return false;
     }
 
     @Override
     public int get(long instant) {
+        System.out.println("TEST");
         return iChronology.getYear(instant);
     }
 
     @Override
     public long add(long instant, int years) {
+        System.out.println("TEST");
         if (years == 0) {
             return instant;
         }
@@ -74,6 +77,7 @@ class BasicYearDateTimeField extends ImpreciseDateTimeField {
 
     @Override
     public long addWrapField(long instant, int years) {
+        System.out.println("TEST");
         if (years == 0) {
             return instant;
         }
@@ -93,6 +97,7 @@ class BasicYearDateTimeField extends ImpreciseDateTimeField {
 
     @Override
     public long setExtended(long instant, int year) {
+        System.out.println("TEST");
         FieldUtils.verifyValueBounds(
                 this, year, iChronology.getMinYear() - 1, iChronology.getMaxYear() + 1);
         return iChronology.setYear(instant, year);

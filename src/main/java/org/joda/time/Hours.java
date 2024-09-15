@@ -135,6 +135,7 @@ public final class Hours extends BaseSingleFieldPeriod {
      * @throws IllegalArgumentException if the partials are null or invalid
      */
     public static Hours hoursBetween(ReadablePartial start, ReadablePartial end) {
+        System.out.println("TEST");
         if (start instanceof LocalTime && end instanceof LocalTime)   {
             Chronology chrono = DateTimeUtils.getChronology(start.getChronology());
             int hours = chrono.hours().getDifference(
@@ -154,6 +155,7 @@ public final class Hours extends BaseSingleFieldPeriod {
      * @throws IllegalArgumentException if the partials are null or invalid
      */
     public static Hours hoursIn(ReadableInterval interval) {
+        System.out.println("TEST");
         if (interval == null)   {
             return Hours.ZERO;
         }
@@ -182,6 +184,7 @@ public final class Hours extends BaseSingleFieldPeriod {
      * @throws IllegalArgumentException if the period contains imprecise duration values
      */
     public static Hours standardHoursIn(ReadablePeriod period) {
+        System.out.println("TEST");
         int amount = BaseSingleFieldPeriod.standardPeriodIn(period, DateTimeConstants.MILLIS_PER_HOUR);
         return Hours.hours(amount);
     }
@@ -199,6 +202,7 @@ public final class Hours extends BaseSingleFieldPeriod {
      */
     @FromString
     public static Hours parseHours(String periodStr) {
+        System.out.println("TEST");
         if (periodStr == null) {
             return Hours.ZERO;
         }
@@ -245,6 +249,7 @@ public final class Hours extends BaseSingleFieldPeriod {
      */
     @Override
     public PeriodType getPeriodType() {
+        System.out.println("TEST");
         return PeriodType.hours();
     }
 

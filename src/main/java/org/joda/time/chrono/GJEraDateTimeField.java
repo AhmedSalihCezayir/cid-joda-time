@@ -82,6 +82,7 @@ final class GJEraDateTimeField extends BaseDateTimeField {
      */
     @Override
     public long set(long instant, int era) {
+        System.out.println("TEST");
         FieldUtils.verifyValueBounds(this, era, DateTimeConstants.BCE, DateTimeConstants.CE);
             
         int oldEra = get(instant);
@@ -95,11 +96,13 @@ final class GJEraDateTimeField extends BaseDateTimeField {
 
     @Override
     public long set(long instant, String text, Locale locale) {
+        System.out.println("TEST");
         return set(instant, GJLocaleSymbols.forLocale(locale).eraTextToValue(text));
     }
 
     @Override
     public long roundFloor(long instant) {
+        System.out.println("TEST");
         if (get(instant) == DateTimeConstants.CE) {
             return iChronology.setYear(0, 1);
         } else {
@@ -118,6 +121,7 @@ final class GJEraDateTimeField extends BaseDateTimeField {
 
     @Override
     public long roundHalfFloor(long instant) {
+        System.out.println("TEST");
         // In reality, the era is infinite, so there is no halfway point.
         return roundFloor(instant);
     }
@@ -156,6 +160,7 @@ final class GJEraDateTimeField extends BaseDateTimeField {
 
     @Override
     public int getMaximumTextLength(Locale locale) {
+        System.out.println("TEST");
         return GJLocaleSymbols.forLocale(locale).getEraMaxTextLength();
     }
 
