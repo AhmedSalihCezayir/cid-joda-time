@@ -65,6 +65,7 @@ public final class LimitChronology extends AssembledChronology {
     public static LimitChronology getInstance(Chronology base,
                                               ReadableDateTime lowerLimit,
                                               ReadableDateTime upperLimit) {
+        System.out.println("TEST");
         if (base == null) {
             throw new IllegalArgumentException("Must supply a chronology");
         }
@@ -107,6 +108,7 @@ public final class LimitChronology extends AssembledChronology {
      * @return lower limit
      */
     public DateTime getLowerLimit() {
+        System.out.println("TEST");
         return iLowerLimit;
     }
 
@@ -116,6 +118,7 @@ public final class LimitChronology extends AssembledChronology {
      * @return upper limit
      */
     public DateTime getUpperLimit() {
+        System.out.println("TEST");
         return iUpperLimit;
     }
 
@@ -416,6 +419,7 @@ public final class LimitChronology extends AssembledChronology {
 
         @Override
         public long getMillis(int value, long instant) {
+            System.out.println("TEST");
             checkLimits(instant, null);
             return getWrappedField().getMillis(value, instant);
         }
@@ -478,6 +482,7 @@ public final class LimitChronology extends AssembledChronology {
 
         @Override
         public int get(long instant) {
+            System.out.println("TEST");
             checkLimits(instant, null);
             return getWrappedField().get(instant);
         }
