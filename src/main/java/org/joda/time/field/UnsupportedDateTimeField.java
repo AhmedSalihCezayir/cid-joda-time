@@ -52,7 +52,7 @@ public final class UnsupportedDateTimeField extends DateTimeField implements Ser
      */
     public static synchronized UnsupportedDateTimeField getInstance(
             DateTimeFieldType type, DurationField durationField) {
-
+        System.out.println("TEST");
         UnsupportedDateTimeField field;
         if (cCache == null) {
             cCache = new HashMap<DateTimeFieldType, UnsupportedDateTimeField>(7);
@@ -95,11 +95,13 @@ public final class UnsupportedDateTimeField extends DateTimeField implements Ser
 
     @Override
     public DateTimeFieldType getType() {
+        System.out.println("TEST");
         return iType;
     }
 
     @Override
     public String getName() {
+        System.out.println("TEST");
         return iType.getName();
     }
 
@@ -130,6 +132,7 @@ public final class UnsupportedDateTimeField extends DateTimeField implements Ser
      */
     @Override
     public int get(long instant) {
+        System.out.println("TEST");
         throw unsupported();
     }
 
@@ -140,6 +143,7 @@ public final class UnsupportedDateTimeField extends DateTimeField implements Ser
      */
     @Override
     public String getAsText(long instant, Locale locale) {
+        System.out.println("TEST");
         throw unsupported();
     }
 

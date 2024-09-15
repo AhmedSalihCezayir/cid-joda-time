@@ -279,6 +279,7 @@ public final class Hours extends BaseSingleFieldPeriod {
      * @return a period representing the number of whole days for this number of hours
      */
     public Days toStandardDays() {
+        System.out.println("TEST");
         return Days.days(getValue() / DateTimeConstants.HOURS_PER_DAY);
     }
 
@@ -295,6 +296,7 @@ public final class Hours extends BaseSingleFieldPeriod {
      * @throws ArithmeticException if the number of minutes is too large to be represented
      */
     public Minutes toStandardMinutes() {
+        System.out.println("TEST");
         return Minutes.minutes(FieldUtils.safeMultiply(getValue(), DateTimeConstants.MINUTES_PER_HOUR));
     }
 
@@ -355,6 +357,7 @@ public final class Hours extends BaseSingleFieldPeriod {
      * @throws ArithmeticException if the result overflows an int
      */
     public Hours plus(int hours) {
+        System.out.println("TEST");
         if (hours == 0) {
             return this;
         }
@@ -371,6 +374,7 @@ public final class Hours extends BaseSingleFieldPeriod {
      * @throws ArithmeticException if the result overflows an int
      */
     public Hours plus(Hours hours) {
+        System.out.println("TEST");
         if (hours == null) {
             return this;
         }
@@ -418,6 +422,7 @@ public final class Hours extends BaseSingleFieldPeriod {
      * @throws ArithmeticException if the result overflows an int
      */
     public Hours multipliedBy(int scalar) {
+        System.out.println("TEST");
         return Hours.hours(FieldUtils.safeMultiply(getValue(), scalar));
     }
 

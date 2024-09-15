@@ -879,6 +879,7 @@ public final class DateTime
      * @throws ArithmeticException if the new datetime exceeds the capacity of a long
      */
     public DateTime withFieldAdded(DurationFieldType fieldType, int amount) {
+        System.out.println("TEST");
         if (fieldType == null) {
             throw new IllegalArgumentException("Field must not be null");
         }
@@ -901,6 +902,7 @@ public final class DateTime
      * @throws ArithmeticException if the new datetime exceeds the capacity of a long
      */
     public DateTime withDurationAdded(long durationToAdd, int scalar) {
+        System.out.println("TEST");
         if (durationToAdd == 0 || scalar == 0) {
             return this;
         }
@@ -919,6 +921,7 @@ public final class DateTime
      * @throws ArithmeticException if the new datetime exceeds the capacity of a long
      */
     public DateTime withDurationAdded(ReadableDuration durationToAdd, int scalar) {
+        System.out.println("TEST");
         if (durationToAdd == null || scalar == 0) {
             return this;
         }
@@ -941,6 +944,7 @@ public final class DateTime
      * @throws ArithmeticException if the new datetime exceeds the capacity of a long
      */
     public DateTime withPeriodAdded(ReadablePeriod period, int scalar) {
+        System.out.println("TEST");
         if (period == null || scalar == 0) {
             return this;
         }
@@ -960,6 +964,7 @@ public final class DateTime
      * @throws ArithmeticException if the new datetime exceeds the capacity of a long
      */
     public DateTime plus(long duration) {
+        System.out.println("TEST");
         return withDurationAdded(duration, 1);
     }
 
