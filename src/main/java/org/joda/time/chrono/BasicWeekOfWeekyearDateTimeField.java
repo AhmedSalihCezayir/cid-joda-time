@@ -53,11 +53,13 @@ final class BasicWeekOfWeekyearDateTimeField extends PreciseDurationDateTimeFiel
      */
     @Override
     public int get(long instant) {
+        System.out.println("TEST");
         return iChronology.getWeekOfWeekyear(instant);
     }
 
     @Override
     public DurationField getRangeDurationField() {
+        System.out.println("TEST");
         return iChronology.weekyears();
     }
 
@@ -66,18 +68,21 @@ final class BasicWeekOfWeekyearDateTimeField extends PreciseDurationDateTimeFiel
 
     @Override
     public long roundFloor(long instant) {
+        System.out.println("TEST");
         return super.roundFloor(instant + 3 * DateTimeConstants.MILLIS_PER_DAY)
             - 3 * DateTimeConstants.MILLIS_PER_DAY;
     }
 
     @Override
     public long roundCeiling(long instant) {
+        System.out.println("TEST");
         return super.roundCeiling(instant + 3 * DateTimeConstants.MILLIS_PER_DAY)
             - 3 * DateTimeConstants.MILLIS_PER_DAY;
     }
 
     @Override
     public long remainder(long instant) {
+        System.out.println("TEST");
         return super.remainder(instant + 3 * DateTimeConstants.MILLIS_PER_DAY);
     }
 
