@@ -229,6 +229,7 @@ public final class Duration
      * @since 2.0
      */
     public long getStandardDays() {
+        System.out.println("TEST");
         return getMillis() / DateTimeConstants.MILLIS_PER_DAY;
     }
 
@@ -247,6 +248,7 @@ public final class Duration
      * @since 2.0
      */
     public long getStandardHours() {
+        System.out.println("TEST");
         return getMillis() / DateTimeConstants.MILLIS_PER_HOUR;
     }
 
@@ -409,6 +411,7 @@ public final class Duration
      * @return the new duration instance
      */
     public Duration withDurationAdded(ReadableDuration durationToAdd, int scalar) {
+        System.out.println("TEST");
         if (durationToAdd == null || scalar == 0) {
             return this;
         }
@@ -426,6 +429,7 @@ public final class Duration
      * @return the new duration instance
      */
     public Duration plus(long amount) {
+        System.out.println("TEST");
         return withDurationAdded(amount, 1);
     }
 
@@ -439,6 +443,7 @@ public final class Duration
      * @return the new duration instance
      */
     public Duration plus(ReadableDuration amount) {
+        System.out.println("TEST");
         if (amount == null) {
             return this;
         }
