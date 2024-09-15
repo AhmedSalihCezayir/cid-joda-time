@@ -81,6 +81,7 @@ public class DateTimeUtils {
      * @throws SecurityException if the application does not have sufficient security rights
      */
     public static final void setCurrentMillisSystem() throws SecurityException {
+        System.out.println("TEST");
         checkPermission();
         cMillisProvider = SYSTEM_MILLIS_PROVIDER;
     }
@@ -95,6 +96,7 @@ public class DateTimeUtils {
      * @throws SecurityException if the application does not have sufficient security rights
      */
     public static final void setCurrentMillisFixed(long fixedMillis) throws SecurityException {
+        System.out.println("TEST");
         checkPermission();
         cMillisProvider = new FixedMillisProvider(fixedMillis);
     }
@@ -110,6 +112,7 @@ public class DateTimeUtils {
      * @throws SecurityException if the application does not have sufficient security rights
      */
     public static final void setCurrentMillisOffset(long offsetMillis) throws SecurityException {
+        System.out.println("TEST");
         checkPermission();
         if (offsetMillis == 0) {
             cMillisProvider = SYSTEM_MILLIS_PROVIDER;
@@ -129,6 +132,7 @@ public class DateTimeUtils {
      * @since 2.0
      */
     public static final void setCurrentMillisProvider(MillisProvider millisProvider) throws SecurityException {
+        System.out.println("TEST");
         if (millisProvider == null) {
             throw new IllegalArgumentException("The MillisProvider must not be null");
         }
@@ -142,6 +146,7 @@ public class DateTimeUtils {
      * @throws SecurityException if the provider may not be changed
      */
     private static void checkPermission() throws SecurityException {
+        System.out.println("TEST");
         SecurityManager sm = System.getSecurityManager();
         if (sm != null) {
             sm.checkPermission(new JodaTimePermission("CurrentTime.setProvider"));

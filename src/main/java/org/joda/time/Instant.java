@@ -88,6 +88,7 @@ public final class Instant
      * @since 2.10
      */
     public static Instant ofEpochMilli(long epochMilli) {
+        System.out.println("TEST");
         return new Instant(epochMilli);
     }
     
@@ -100,6 +101,7 @@ public final class Instant
      * @since 2.10
      */
     public static Instant ofEpochSecond(long epochSecond) {
+        System.out.println("TEST");
         return new Instant(FieldUtils.safeMultiply(epochSecond, 1000));
     }
 
@@ -115,6 +117,7 @@ public final class Instant
      */
     @FromString
     public static Instant parse(String str) {
+        System.out.println("TEST");
         return parse(str, ISODateTimeFormat.dateTimeParser());
     }
 
@@ -174,6 +177,7 @@ public final class Instant
      */
     @Override
     public Instant toInstant() {
+        System.out.println("TEST");
         return this;
     }
 
@@ -191,6 +195,7 @@ public final class Instant
      * @return a copy of this instant with different millis
      */
     public Instant withMillis(long newMillis) {
+        System.out.println("TEST");
         return (newMillis == iMillis ? this : new Instant(newMillis));
     }
 
