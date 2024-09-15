@@ -93,6 +93,7 @@ public abstract class BaseDurationField extends DurationField implements Seriali
      */
     @Override
     public long getValueAsLong(long duration) {
+        System.out.println("TEST");
         return duration / getUnitMillis();
     }
 
@@ -114,6 +115,7 @@ public abstract class BaseDurationField extends DurationField implements Seriali
      */
     @Override
     public int getValue(long duration, long instant) {
+        System.out.println("TEST");
         return FieldUtils.safeToInt(getValueAsLong(duration, instant));
     }
 
@@ -127,6 +129,7 @@ public abstract class BaseDurationField extends DurationField implements Seriali
      */
     @Override
     public long getMillis(int value) {
+        System.out.println("TEST");
         return value * getUnitMillis();  // safe
     }
 
@@ -140,6 +143,7 @@ public abstract class BaseDurationField extends DurationField implements Seriali
      */
     @Override
     public long getMillis(long value) {
+        System.out.println("TEST");
         return FieldUtils.safeMultiply(value, getUnitMillis());
     }
 
@@ -147,6 +151,7 @@ public abstract class BaseDurationField extends DurationField implements Seriali
     //------------------------------------------------------------------------
     @Override
     public int getDifference(long minuendInstant, long subtrahendInstant) {
+        System.out.println("TEST");
         return FieldUtils.safeToInt(getDifferenceAsLong(minuendInstant, subtrahendInstant));
     }
 

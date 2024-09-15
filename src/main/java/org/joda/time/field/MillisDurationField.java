@@ -72,6 +72,7 @@ public final class MillisDurationField extends DurationField implements Serializ
      */
     @Override
     public final boolean isPrecise() {
+        System.out.println("TEST");
         return true;
     }
 
@@ -82,17 +83,20 @@ public final class MillisDurationField extends DurationField implements Serializ
      */
     @Override
     public final long getUnitMillis() {
+        System.out.println("TEST");
         return 1;
     }
 
     //------------------------------------------------------------------------
     @Override
     public int getValue(long duration) {
+        System.out.println("TEST");
         return FieldUtils.safeToInt(duration);
     }
 
     @Override
     public long getValueAsLong(long duration) {
+        System.out.println("TEST");
         return duration;
     }
 
@@ -118,6 +122,7 @@ public final class MillisDurationField extends DurationField implements Serializ
 
     @Override
     public long getMillis(int value, long instant) {
+        System.out.println("TEST");
         return value;
     }
 

@@ -62,6 +62,7 @@ public final class StrictChronology extends AssembledChronology {
 
     @Override
     public Chronology withUTC() {
+        System.out.println("TEST");
         if (iWithUTC == null) {
             if (getZone() == DateTimeZone.UTC) {
                 iWithUTC = this;
@@ -74,6 +75,7 @@ public final class StrictChronology extends AssembledChronology {
 
     @Override
     public Chronology withZone(DateTimeZone zone) {
+        System.out.println("TEST");
         if (zone == null) {
             zone = DateTimeZone.getDefault();
         }
@@ -88,6 +90,7 @@ public final class StrictChronology extends AssembledChronology {
 
     @Override
     protected void assemble(Fields fields) {
+        System.out.println("TEST");
         fields.year = convertField(fields.year);
         fields.yearOfEra = convertField(fields.yearOfEra);
         fields.yearOfCentury = convertField(fields.yearOfCentury);
@@ -115,6 +118,7 @@ public final class StrictChronology extends AssembledChronology {
     }
 
     private static final DateTimeField convertField(DateTimeField field) {
+        System.out.println("TEST");
         return StrictDateTimeField.getInstance(field);
     }
 
@@ -129,6 +133,7 @@ public final class StrictChronology extends AssembledChronology {
      */
     @Override
     public boolean equals(Object obj) {
+        System.out.println("TEST");
         if (this == obj) {
             return true;
         }

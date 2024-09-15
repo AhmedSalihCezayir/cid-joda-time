@@ -49,6 +49,7 @@ public class FieldUtils {
      * @since 1.1
      */
     public static int safeNegate(int value) {
+        System.out.println("TEST");
         if (value == Integer.MIN_VALUE) {
             throw new ArithmeticException("Integer.MIN_VALUE cannot be negated");
         }
@@ -82,6 +83,7 @@ public class FieldUtils {
      * @throws ArithmeticException if the value is too big or too small
      */
     public static long safeAdd(long val1, long val2) {
+        System.out.println("TEST");
         long sum = val1 + val2;
         // If there is a sign change, but the two values have the same sign...
         if ((val1 ^ sum) < 0 && (val1 ^ val2) >= 0) {
@@ -119,6 +121,7 @@ public class FieldUtils {
      * @since 1.2
      */
     public static int safeMultiply(int val1, int val2) {
+        System.out.println("TEST");
         long total = (long) val1 * (long) val2;
         if (total < Integer.MIN_VALUE || total > Integer.MAX_VALUE) {
           throw new ArithmeticException("Multiplication overflows an int: " + val1 + " * " + val2);
@@ -136,6 +139,7 @@ public class FieldUtils {
      * @since 1.2
      */
     public static long safeMultiply(long val1, int val2) {
+        System.out.println("TEST");
         switch (val2) {
             case -1:
                 if (val1 == Long.MIN_VALUE) {
@@ -163,6 +167,7 @@ public class FieldUtils {
      * @throws ArithmeticException if the value is too big or too small
      */
     public static long safeMultiply(long val1, long val2) {
+        System.out.println("TEST");
         if (val2 == 1) {
             return val1;
         }
